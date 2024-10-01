@@ -1,0 +1,41 @@
+console.log("MENU");
+console.log("1.Pizza-Rs 200");
+console.log("2.Burger-Rs 300");
+console.log("3.Chicken Briyani-Rs 250");
+console.log("4.Apple Juice-Rs 100");
+console.log("5.Idly-Rs 80");
+    let tot=0;
+    let choice;
+    let n;
+      for (let i=0;i<5;i++) {
+        choice=parseInt(prompt("Enter your choice (1-5): "));
+        n=parseInt(prompt("Enter the quantity: "));
+        switch (choice) {
+          case 1:
+            tot+=200*n;
+            break;
+          case 2:
+            tot+=300*n;
+            break;
+          case 3:
+            tot+= 250*n;
+            break;
+          case 4:
+            tot+= 100*n;
+            break;
+          case 5:
+            tot+=80*n;
+            break;
+          default:
+          console.log("Invalid choice. Please enter a number between 1 and 5.");
+            i--; 
+            break;
+        }
+      }
+      if (tot>500) {
+        tot=tot-(tot*0.10);
+        console.log("You have a 10% discount. New total cost:Rs "+tot);
+      } else {
+        alert("Total cost:Rs "+tot);
+      }
+    
