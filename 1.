@@ -1,0 +1,10 @@
+let m=prompt("m:");
+let n=prompt("n:");
+let s=0;
+if(m<n){
+    for(let i=m;i<=n;i++)
+    s+=(i*i*i);
+    console.log(s);
+}
+else
+console.log(0);
